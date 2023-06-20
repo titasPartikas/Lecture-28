@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<%- include("../partials/head") %>
+<html lang="en">
+  <%- include("../partials/header") %>
+  <body>
+    <h4><%= welcomingMessage %></h4>
+    <a href="/">Home</a>
+
+    <ul>
+      <% users.forEach((user) => { %> <%- include("../partials/userItem", {
+      user: user }) %> <% }) %>
+    </ul>
+  </body>
+  <%- include("../partials/footer") %>
+</html>
